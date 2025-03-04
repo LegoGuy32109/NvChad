@@ -40,3 +40,13 @@ map('n', '<M-Down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 map('n', '<M-Up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 map('n', '<S-Down>', '<C-d>', { desc = 'Move down file half a view' })
 map('n', '<S-Up>', '<C-u>', { desc = 'Move up file half a view' })
+
+-- Gitsigns integration https://github.com/lewis6991/gitsigns.nvim?tab=readme-ov-file#-keymaps
+-- local gitsigns = require('gitsigns')
+-- map('n', '<leader>hb', gitsigns.blame_line({ full = true }), { desc = 'Get full git blame on current line' })
+-- map('n', '<leader>hr', gitsigns.reset_hunk, { desc = 'Reset the current hunk' })
+-- map('n', '<leader>hs', gitsigns.stage_hunk, { desc = 'Stage the current hunk' })
+-- map('n', '<leader>hd', gitsigns.diffthis, { desc = 'Get git diff against base' })
+-- map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = 'Toggle inline git blame' })
+-- map('n', '<leader>td', gitsigns.toggle_deleted, { desc = 'See deleted changes' })
+-- map('n', '<leader>tw', gitsigns.toggle_word_diff, { desc = 'activate word diff' })
