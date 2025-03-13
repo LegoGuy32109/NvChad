@@ -36,3 +36,6 @@ redis
 utf8
 utils
 io
+local
+keymap
+desc

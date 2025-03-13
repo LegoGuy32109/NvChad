@@ -13,6 +13,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.cmd("hi SpellBad gui=underline")
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -49,7 +50,7 @@ vim.schedule(function()
   require "mappings"
 end)
 
-require('gitsigns').setup{
+require('gitsigns').setup {
   on_attach = function(bufnr)
     local gitsigns = require('gitsigns')
 
@@ -62,7 +63,7 @@ require('gitsigns').setup{
     -- Navigation
     map('n', ']c', function()
       if vim.wo.diff then
-        vim.cmd.normal({']c', bang = true})
+        vim.cmd.normal({ ']c', bang = true })
       else
         gitsigns.nav_hunk('next')
       end
@@ -70,7 +71,7 @@ require('gitsigns').setup{
 
     map('n', '[c', function()
       if vim.wo.diff then
-        vim.cmd.normal({'[c', bang = true})
+        vim.cmd.normal({ '[c', bang = true })
       else
         gitsigns.nav_hunk('prev')
       end
@@ -112,7 +113,6 @@ require('gitsigns').setup{
     map('n', '<leader>tw', gitsigns.toggle_word_diff)
 
     -- Text object
-    map({'o', 'x'}, 'ih', gitsigns.select_hunk)
+    map({ 'o', 'x' }, 'ih', gitsigns.select_hunk)
   end
 }
-
