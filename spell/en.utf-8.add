@@ -39,3 +39,8 @@ io
 local
 keymap
 desc
+WebKit
+css
+ejs
+worklist
+apollo
