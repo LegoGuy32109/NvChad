@@ -44,3 +44,5 @@ css
 ejs
 worklist
 apollo
+usize
+u16

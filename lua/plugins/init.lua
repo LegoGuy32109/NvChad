@@ -27,6 +27,8 @@ return {
         "vimdoc",
         "html",
         "css",
+        "gdscript",
+        "godot_resource",
       },
     },
   },
