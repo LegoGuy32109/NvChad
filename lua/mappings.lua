@@ -56,3 +56,14 @@ map("n", "<leader>fj", telescope.jumplist, { desc = "Jump to point in jump list"
 map("n", "zs", telescope.spell_suggest, { desc = "Spelling corrections" })
 map("n", "<leader>fk", telescope.keymaps, { desc = "Find Keymaps" })
 map("n", "<leader>fq", telescope.quickfix, { desc = "Search items in quickfix" })
+
+-- toggle for code warnings/errors
+vim.g["diagnostics_active"] = true
+map("n", "<leader>dt", function()
+  if vim.g.diagnostics_active then
+    vim.g.diagnostics_active = false
+  else
+    vim.g.diagnostics_active = true
+  end
+  vim.diagnostic.enable(vim.g.diagnostics_active)
+end, { desc = "[D]iagnostic [T]oggle" })
