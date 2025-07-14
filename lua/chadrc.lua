@@ -3,7 +3,7 @@
 -- Please read that file to know all available options :(
 
 ---@type ChadrcConfig
-local M  = {}
+local M = {}
 
 M.base46 = {
   theme = "catppuccin",
@@ -17,12 +17,12 @@ M.base46 = {
 }
 
 -- M.nvdash = { load_on_startup = true }
-M.ui
-         = {
+M.ui = {
   SpellBad = { bg = "#770000", fg = "#ffffff" },
   tabufline = {
-    enabled = false
-  }
+    enabled = false,
+    lazyload = false,
+  },
 }
 
 return M
