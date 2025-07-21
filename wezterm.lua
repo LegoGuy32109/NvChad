@@ -63,7 +63,7 @@ end)
 -- mods "SHIFT|CTRL|ALT"
 config.keys = {
   {
-    key = "z",
+    key = "J",
     mods = "SHIFT|CTRL|ALT",
     action = wezterm.action.EmitEvent "start-joshagachi-dev",
   },
